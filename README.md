@@ -27,4 +27,4 @@ Check out my live projects:
 ---
 
 ### 📝 Credits
-This portfolio is built using the **[Void](https://github.com/JorgeRosbel/void)** template, a clean, multilingual portfolio framework by [JorgeRosbel](https://github.com/JorgeRosbel).
+My portfolio is built using the **[Void](https://github.com/JorgeRosbel/void)** template, a clean, multilingual portfolio framework by [JorgeRosbel](https://github.com/JorgeRosbel).
