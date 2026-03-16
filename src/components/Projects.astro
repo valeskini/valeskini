@@ -1,0 +1,55 @@
+---
+import I18NDebug from "@ariaskit/astro-i18n/I18NDebug.astro";
+import Arrow from "@lucide/astro/icons/corner-right-up";
+
+type Item = {
+    nameKey: string;
+    descriptionKey: string;
+    name: string;
+    description: string;
+    link?: string;
+};
+
+interface Props {
+    title: { key: string; value: string };
+    projects: Item[];
+}
+
+const { title, projects } = Astro.props as Props;
+---
+
+<section id={title.value.toLowerCase()} class="scroll-mt-28">
+    <I18NDebug key={title.key}>
+        <h2 class="opacity-50 uppercase mb-6">{title.value}</h2>
+    </I18NDebug>
+
+    <ul class="space-y-3">
+        {
+            projects.map((project) => (
+                <li class="group">
+                    <I18NDebug key={project.nameKey}>
+                            <a
+                                href={project.repo}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                name={project.name}
+                                class="mb-5 font-semibold transition-all duration-200 group-hover:text-purple-500 "
+                            >
+                                {project.name} <Arrow class="h-3 w-3 inline transition-all text-purple-500  duration-200 invisible opacity-0 group-hover:visible group-hover:opacity-100" />
+                            </a>
+                    </I18NDebug>
+                    <I18NDebug key={project.descriptionKey}>
+                        <p class="opacity-50 text-[0.88rem]">
+                            {project.description}
+                        </p>
+                        {project.demo && (
+                            <p class="opacity-50 text-[0.80rem]">
+                                Demo: <a href={project.demo} target="_blank" rel="noopener noreferrer" class="transition-all duration-200 hover:text-purple-500">{project.demo}</a>
+                            </p>
+                        )}
+                    </I18NDebug>
+                </li>
+            ))
+        }
+    </ul>
+</section>

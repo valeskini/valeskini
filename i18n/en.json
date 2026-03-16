@@ -1,0 +1,123 @@
+{
+    "description": "Full-stack developer and system admin. Building performant Svelte/React web apps and robust, self-hosted Linux server infrastructure.",
+    "nav": {
+        "about": "about",
+        "projects": "projects",
+        "experience": "experience",
+        "contact": "contact"
+    },
+    "hero": {
+        "title": "Backend-focused Developer",
+        "p1": "I build web apps and dev tools that actually work. I prefer solid backend architecture and clean logic over over-engineered UI design.",
+        "p2": "I’ve taught myself everything I know by just building stuff—from scaling a tool for FridaysForFuture to managing my own Linux server infrastructure.",
+        "p3": "Currently tinkering with server automation and backend systems. I just want to make my server-infrastructure more reliable."
+    },
+    "projects": {
+        "title": "Projects",
+        "item_1": {
+            "name": "plakatiertool",
+            "description": "A full-stack mapping app built for FFF to track poster locations at scale. I implemented a permission system that masks exact coordinates for guest users, ensuring location security. The PWA architecture ensures easy usage, making it reliable for field use by activists.",
+            "repo": "https://gitlab.com/fff-austria/plakatiertool",
+            "demo": "https://plakatool.valeskini.dev"
+        },
+        "item_2": {
+            "name": "oeffimonitor",
+            "description": "A public transport dashboard I adapted to switch from the WienerLinien API to the Verbundlinie TRIAS API. It features a Node.js backend that handles data caching and OSRM for dynamic walking-time calculations, designed to run on a Raspberry Pi.",
+            "repo": "https://github.com/valeskini/oeffimonitor",
+            "demo": "https://oeffimonitor.valeskini.dev"
+        },
+        "item_3": {
+            "name": "valeskini.co.at",
+            "description": "A performance-optimized migration of a legacy CMS-based site. I rebuilt the platform from the ground up using React and custom CSS, replacing bloated CMS overhead with a clean, maintainable component structure. The site is self-hosted on a performance-tuned Linux environment to minimize latency.",
+            "repo": "https://github.com/valeskini/valeskini.co.at",
+            "demo": "https://reitstall.valeskini.dev"
+        },
+        "item_4": {
+            "name": "quackpic.at",
+            "description": "A self-hosted image hosting platform I started building at age 12. While the codebase is admittedly a 'legacy' snapshot of my early days and the CSS is questionable, the Node.js backend has proven to be surprisingly stable, handling file uploads and database management efficiently for years without downtime.",
+            "repo": "https://github.com/valeskini/quackpic",
+            "demo": "https://qpic.valeskini.dev"
+        }
+    },
+    "experience": {
+        "title": "Experience",
+        "item_1": {
+            "period": "Feb 2025 – Present",
+            "role": "Apprentice Office Manager",
+            "company": "Lackner & Urnitsch GmbH",
+            "description": "Managing administrative workflows with a focus on ERP systems. Gaining practical insights into internal IT departments and technical support processes."
+        },
+        "item_2": {
+            "period": "Sep 2023 – Dec 2024",
+            "role": "Computer Science Student",
+            "company": "HTL Spengergasse",
+            "description": "Focused on CS fundamentals, hardware architecture, and systems engineering. Specialized in technical implementation and hands-on problem solving in IT projects."
+        },
+        "item_3": {
+            "period": "Jan 2022 – Present",
+            "role": "IT Admin & Developer (Volunteer)",
+            "company": "Fridays For Future Austria",
+            "description": "Developed and maintained custom software for internal data management. Responsible for IT administration and organizing large-scale technical operations."
+        },
+        "item_4": {
+            "period": "2018 – Present",
+            "role": "Homelab Architect",
+            "company": "Self-Managed",
+            "description": "Building and maintaining a private server infrastructure. Implementing and managing services like Nextcloud, Proxmox, and Mailcow to master Linux environments."
+        }
+    },
+    "skills": {
+        "heading": "Skills",
+        "typescript": {
+            "title": "TypeScript & Node.js",
+            "category": "Backend / Language",
+            "description": "Async I/O, RESTful APIs, type-safe backend logic",
+            "experience_years": "4",
+            "experience_label": "years"
+        },
+        "sveltekit": {
+            "title": "SvelteKit",
+            "category": "Frontend",
+            "description": "SSR, Reactive components, PWA development",
+            "experience_years": "3",
+            "experience_label": "years"
+        },
+        "react": {
+            "title": "ReactJS",
+            "category": "Frontend",
+            "description": "SPA architecture, legacy migration, component hooks",
+            "experience_years": "6",
+            "experience_label": "years"
+        },
+        "docker": {
+            "title": "Docker & Compose",
+            "category": "Infrastructure",
+            "description": "Container orchestration, volume persistence, networking",
+            "experience_years": "2",
+            "experience_label": "years"
+        },
+        "linux": {
+            "title": "Linux & Admin",
+            "category": "Infrastructure",
+            "description": "Server maintenance, SSH, CLI workflows, permissions",
+            "experience_years": "5",
+            "experience_label": "years"
+        },
+        "java": {
+            "title": "Java & Kotlin",
+            "category": "Development",
+            "description": "Minecraft modding, plugin development, JVM basics",
+            "experience_years": "3",
+            "experience_label": "years"
+        }
+    },
+    "contact": {
+        "status": "Available for work",
+        "email_label": "Email",
+        "email_url": "mailto:massi@valeskini.dev",
+        "github_label": "GitHub",
+        "github_url": "https://github.com/valeskini",
+        "linkedin_label": "Linkedin",
+        "linkedin_url": "https://linkedin.com/in/valeskini"
+    }
+}

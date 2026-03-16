@@ -1,0 +1,123 @@
+{
+    "description": "Full-Stack-Entwicklerin und Systemadministratorin. Spezialisiert auf performante Web-Apps mit Svelte/React und robuste, selbstgehostete Linux-Infrastruktur.",
+    "nav": {
+        "about": "über mich",
+        "projects": "projekte",
+        "experience": "erfahrung",
+        "contact": "kontakt"
+    },
+    "hero": {
+        "title": "Backend-fokussierte Developerin",
+        "p1": "Ich baue Web-Apps und Dev-Tools, die einfach funktionieren. Stabiles Backend und saubere Logik sind mir wichtiger als überladenes UI-Design.",
+        "p2": "Alles, was ich kann, hab ich mir selbst beigebracht, während ich einfach Zeug gebaut habe – vom Scaling eines Tools für FridaysForFuture bis zum Management meiner eigenen Linux-Server-Infrastruktur.",
+        "p3": "Gerade tüftle ich viel an Server-Automatisierung und Backend-Systemen rum. Ich will meine Server-Infra endlich gescheit machen."
+    },
+    "projects": {
+        "title": "Projekte",
+        "item_1": {
+            "name": "plakatiertool",
+            "description": "Full-Stack Mapping-App für FFF, um Plakatstandorte im großen Stil zu tracken. Hab ein Berechtigungssystem eingebaut, das genaue Koordinaten für Gäste versteckt, damit alles sicher bleibt. Dank PWA läuft das Ding auch im Feld bei Aktionen extrem zuverlässig.",
+            "repo": "https://gitlab.com/fff-austria/plakatiertool",
+            "demo": "https://plakatool.valeskini.dev"
+        },
+        "item_2": {
+            "name": "oeffimonitor",
+            "description": "Ein Dashboard für Öffis, das ich von der WienerLinien API auf die Verbundlinie TRIAS API umgestellt habe. Das Node.js Backend kümmert sich um Caching und OSRM für Gehzeit-Berechnungen. Läuft perfekt auf einem Raspberry Pi.",
+            "repo": "https://github.com/valeskini/oeffimonitor",
+            "demo": "https://oeffimonitor.valeskini.dev"
+        },
+        "item_3": {
+            "name": "valeskini.co.at",
+            "description": "Performance-Migration einer alten CMS-Seite. Hab die Plattform komplett neu mit React und eigenem CSS gebaut und den ganzen CMS-Ballast durch eine saubere Komponenten-Struktur ersetzt. Self-hosted auf Linux, um die Latenz so gering wie möglich zu halten.",
+            "repo": "https://github.com/valeskini/valeskini.co.at",
+            "demo": "https://reitstall.valeskini.dev"
+        },
+        "item_4": {
+            "name": "quackpic.at",
+            "description": "Eigene Image-Hosting-Plattform, die ich mit 12 angefangen hab zu bauen. Der Code ist natürlich ein krasser 'Legacy' Snapshot aus meinen Anfängen und das CSS ist echt sketchy, aber das Node.js Backend läuft seit Jahren ohne Downtime stabil durch.",
+            "repo": "https://github.com/valeskini/quackpic",
+            "demo": "https://qpic.valeskini.dev"
+        }
+    },
+    "experience": {
+        "title": "Erfahrung",
+        "item_1": {
+            "period": "Feb 2025 – Heute",
+            "role": "Lehrling Bürokauffrau",
+            "company": "Lackner & Urnitsch GmbH",
+            "description": "Abwicklung von Workflows mit Fokus auf Warenwirtschaftssysteme (ERP). Direkte Einblicke in die interne IT und technischen Support."
+        },
+        "item_2": {
+            "period": "Sep 2023 – Dez 2024",
+            "role": "Informatik-Schülerin",
+            "company": "HTL Spengergasse",
+            "description": "CS-Grundlagen, Hardware-Architektur und Systemtechnik. Fokus auf technische Umsetzung und praktisches Problemlösen in IT-Projekten."
+        },
+        "item_3": {
+            "period": "Jan 2022 – Heute",
+            "role": "IT-Admin & Developerin (Ehrenamtlich)",
+            "company": "Fridays For Future Österreich",
+            "description": "Entwicklung und Wartung von Software für internes Datenmanagement. Zuständig für die IT-Admin und technische Planung bei großen Aktionen."
+        },
+        "item_4": {
+            "period": "2018 – Heute",
+            "role": "Homelab Architektin",
+            "company": "Self-Managed",
+            "description": "Aufbau und Wartung privater Server-Infrastruktur. Management von Services wie Nextcloud, Proxmox und Mailcow, um Linux-Umgebungen richtig zu beherrschen."
+        }
+    },
+    "skills": {
+        "heading": "Skills",
+        "typescript": {
+            "title": "TypeScript & Node.js",
+            "category": "Backend / Sprache",
+            "description": "Async I/O, REST APIs, typsichere Backend-Logik",
+            "experience_years": "4",
+            "experience_label": "Jahre"
+        },
+        "sveltekit": {
+            "title": "SvelteKit",
+            "category": "Frontend",
+            "description": "SSR, Reaktive Komponenten, PWA Entwicklung",
+            "experience_years": "3",
+            "experience_label": "Jahre"
+        },
+        "react": {
+            "title": "ReactJS",
+            "category": "Frontend",
+            "description": "SPA Architektur, Legacy Migration, Hooks",
+            "experience_years": "6",
+            "experience_label": "Jahre"
+        },
+        "docker": {
+            "title": "Docker & Compose",
+            "category": "Infrastruktur",
+            "description": "Container-Orchestrierung, Volumes, Networking",
+            "experience_years": "2",
+            "experience_label": "Jahre"
+        },
+        "linux": {
+            "title": "Linux & Admin",
+            "category": "Infrastruktur",
+            "description": "Server-Wartung, SSH, CLI Workflows, Berechtigungen",
+            "experience_years": "5",
+            "experience_label": "Jahre"
+        },
+        "java": {
+            "title": "Java & Kotlin",
+            "category": "Development",
+            "description": "Minecraft Modding, Plugins, JVM Basics",
+            "experience_years": "3",
+            "experience_label": "Jahre"
+        }
+    },
+    "contact": {
+        "status": "Ready für neue Projekte",
+        "email_label": "E-Mail",
+        "email_url": "mailto:massi@valeskini.dev",
+        "github_label": "GitHub",
+        "github_url": "https://github.com/valeskini",
+        "linkedin_label": "LinkedIn",
+        "linkedin_url": "https://linkedin.com/in/valeskini"
+    }
+}

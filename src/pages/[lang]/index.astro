@@ -1,0 +1,261 @@
+---
+export const getStaticPaths = () => {
+  return [
+    { params: { lang: "en" } },
+    { params: { lang: "de" } },
+  ];
+};
+
+import Layout from "@/src/layouts/Layout.astro";
+import { useI18n } from "@ariaskit/astro-i18n";
+import { type LocaleSchema } from "@/src/types";
+import Header from "@/src/components/Header.astro";
+import Hero from "@/src/components/Hero.astro";
+import Projects from "@/src/components/Projects.astro";
+import Experience from "@/src/components/Experience.astro";
+import Footer from "@/src/components/Footer.astro";
+import Skills from "@/src/components/Skills.astro";
+
+const { t, locale } = useI18n<LocaleSchema>({
+  ssg: {
+    astro: Astro,
+  },
+});
+
+const nav = [
+  { path: `/`, text: t("nav.about") },
+  { path: `#${t("nav.projects")}`, text: t("nav.projects") },
+  { path: `#${t("nav.experience")}`, text: t("nav.experience") },
+  { path: `#${t("nav.contact")}`, text: t("nav.contact") },
+];
+
+const heroProps = {
+  name: "Massi Valeskini",
+  title: { key: "hero.title", value: t("hero.title") },
+  p1: { key: "hero.p1", value: t("hero.p1") },
+  p2: { key: "hero.p2", value: t("hero.p2") },
+  p3: { key: "hero.p3", value: t("hero.p3") },
+};
+
+const projects = [
+  {
+    nameKey: "projects.item_1.name",
+    descriptionKey: "projects.item_1.description",
+    name: t("projects.item_1.name"),
+    description: t("projects.item_1.description"),
+    repo: t("projects.item_1.repo"),
+    demo: t("projects.item_1.demo"),
+  },
+  {
+    nameKey: "projects.item_2.name",
+    descriptionKey: "projects.item_2.description",
+    name: t("projects.item_2.name"),
+    description: t("projects.item_2.description"),
+    repo: t("projects.item_2.repo"),
+    demo: t("projects.item_2.demo"),
+  },
+  {
+    nameKey: "projects.item_3.name",
+    descriptionKey: "projects.item_3.description",
+    name: t("projects.item_3.name"),
+    description: t("projects.item_3.description"),
+    repo: t("projects.item_3.repo"),
+    demo: t("projects.item_3.demo"),
+  },
+  {
+    nameKey: "projects.item_4.name",
+    descriptionKey: "projects.item_4.description",
+    name: t("projects.item_4.name"),
+    description: t("projects.item_4.description"),
+    repo: t("projects.item_4.repo"),
+    demo: t("projects.item_4.demo"),
+  },
+];
+
+const projectsProps = {
+  title: { key: "projects.title", value: t("projects.title") },
+  projects,
+};
+
+const experienceData = {
+  title: {
+    key: "experience.title",
+    value: t("experience.title"),
+  },
+  jobs: [
+    {
+      period: {
+        key: "experience.item_1.period",
+        value: t("experience.item_1.period"),
+      },
+      role: {
+        key: "experience.item_1.role",
+        value: t("experience.item_1.role"),
+      },
+      company: {
+        key: "experience.item_1.company",
+        value: t("experience.item_1.company"),
+      },
+      description: {
+        key: "experience.item_1.description",
+        value: t("experience.item_1.description"),
+      },
+    },
+    {
+      period: {
+        key: "experience.item_2.period",
+        value: t("experience.item_2.period"),
+      },
+      role: {
+        key: "experience.item_2.role",
+        value: t("experience.item_2.role"),
+      },
+      company: {
+        key: "experience.item_2.company",
+        value: t("experience.item_2.company"),
+      },
+      description: {
+        key: "experience.item_2.description",
+        value: t("experience.item_2.description"),
+      },
+    },
+    {
+      period: {
+        key: "experience.item_3.period",
+        value: t("experience.item_3.period"),
+      },
+      role: {
+        key: "experience.item_3.role",
+        value: t("experience.item_3.role"),
+      },
+      company: {
+        key: "experience.item_3.company",
+        value: t("experience.item_3.company"),
+      },
+      description: {
+        key: "experience.item_3.description",
+        value: t("experience.item_3.description"),
+      },
+    },
+    {
+      period: {
+        key: "experience.item_4.period",
+        value: t("experience.item_4.period"),
+      },
+      role: {
+        key: "experience.item_4.role",
+        value: t("experience.item_4.role"),
+      },
+      company: {
+        key: "experience.item_4.company",
+        value: t("experience.item_4.company"),
+      },
+      description: {
+        key: "experience.item_4.description",
+        value: t("experience.item_4.description"),
+      },
+    },
+  ],
+};
+
+const alternate = [
+  { href: "/de", hreflang: "de" },
+  { href: "/en", hreflang: "en" },
+];
+
+const footerContent = {
+  id: t("nav.contact").toLowerCase(),
+  status: {
+    key: "contact.status",
+    value: t("contact.status"),
+  },
+  email_label: {
+    key: "contact.email_label",
+    value: t("contact.email_label"),
+  },
+  email_url: {
+    key: "contact.email_url",
+    value: t("contact.email_url"),
+  },
+  github_label: {
+    key: "contact.github_label",
+    value: t("contact.github_label"),
+  },
+  github_url: {
+    key: "contact.github_url",
+    value: t("contact.github_url"),
+  },
+  linkedin_label: {
+    key: "contact.linkedin_label",
+    value: t("contact.linkedin_label"),
+  },
+  linkedin_url: {
+    key: "contact.linkedin_url",
+    value: t("contact.linkedin_url"),
+  },
+};
+
+const skills = [
+  {
+    title: { key: "skills.typescript.title", value: t("skills.typescript.title") },
+    category: { key: "skills.typescript.category", value: t("skills.typescript.category") },
+    description: { key: "skills.typescript.description", value: t("skills.typescript.description") },
+    experience_years: { key: "skills.typescript.experience_years", value: t("skills.typescript.experience_years") },
+    experience_label: { key: "skills.typescript.experience_label", value: t("skills.typescript.experience_label") },
+  },
+  {
+    title: { key: "skills.sveltekit.title", value: t("skills.sveltekit.title") },
+    category: { key: "skills.sveltekit.category", value: t("skills.sveltekit.category") },
+    description: { key: "skills.sveltekit.description", value: t("skills.sveltekit.description") },
+    experience_years: { key: "skills.sveltekit.experience_years", value: t("skills.sveltekit.experience_years") },
+    experience_label: { key: "skills.sveltekit.experience_label", value: t("skills.sveltekit.experience_label") },
+  },
+  {
+    title: { key: "skills.react.title", value: t("skills.react.title") },
+    category: { key: "skills.react.category", value: t("skills.react.category") },
+    description: { key: "skills.react.description", value: t("skills.react.description") },
+    experience_years: { key: "skills.react.experience_years", value: t("skills.react.experience_years") },
+    experience_label: { key: "skills.react.experience_label", value: t("skills.react.experience_label") },
+  },
+  {
+    title: { key: "skills.docker.title", value: t("skills.docker.title") },
+    category: { key: "skills.docker.category", value: t("skills.docker.category") },
+    description: { key: "skills.docker.description", value: t("skills.docker.description") },
+    experience_years: { key: "skills.docker.experience_years", value: t("skills.docker.experience_years") },
+    experience_label: { key: "skills.docker.experience_label", value: t("skills.docker.experience_label") },
+  },
+  {
+    title: { key: "skills.linux.title", value: t("skills.linux.title") },
+    category: { key: "skills.linux.category", value: t("skills.linux.category") },
+    description: { key: "skills.linux.description", value: t("skills.linux.description") },
+    experience_years: { key: "skills.linux.experience_years", value: t("skills.linux.experience_years") },
+    experience_label: { key: "skills.linux.experience_label", value: t("skills.linux.experience_label") },
+  },
+  {
+    title: { key: "skills.java.title", value: t("skills.java.title") },
+    category: { key: "skills.java.category", value: t("skills.java.category") },
+    description: { key: "skills.java.description", value: t("skills.java.description") },
+    experience_years: { key: "skills.java.experience_years", value: t("skills.java.experience_years") },
+    experience_label: { key: "skills.java.experience_label", value: t("skills.java.experience_label") },
+  }
+];
+
+---
+
+<Layout
+  locale={locale}
+  title="Massi Valeskini"
+  description={t("description")}
+  alternateLinks={alternate}
+>
+    <Header nav={nav} locales={["en", "de"]} currentLocale={locale} />
+
+  <main>
+    <Hero {...heroProps} />
+    <Projects {...projectsProps} />
+    <Experience {...experienceData} />
+    <Skills heading={{key: "skills.heading", value: t("skills.heading")}} content={skills} />
+  </main>
+
+  <Footer {...footerContent} />
+</Layout>
